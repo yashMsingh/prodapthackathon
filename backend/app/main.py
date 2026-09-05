@@ -1,15 +1,17 @@
-"""
-ProdApt Email Intelligence API — FastAPI application entry point.
-"""
+"""ProdApt Email Intelligence API — FastAPI application entry point."""
 
 from __future__ import annotations
 
 import logging
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
+from app.routers import analyse as analyse_router
+from app.routers import draft as draft_router
 from app.routers import search as search_router
+from app.routers import tasks as tasks_router
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -18,7 +20,9 @@ settings = get_settings()
 
 app = FastAPI(
     title=settings.app_name,
-    description="Vectorstore, Semantic Search, and Email Intelligence API.",
+    description=(
+        "Vectorstore, semantic search, and AI-powered email intelligence API."
+    ),
     version="0.1.0",
     docs_url="/docs",
     redoc_url="/redoc",
@@ -39,15 +43,9 @@ app.add_middleware(
 # Routers
 # ---------------------------------------------------------------------------
 app.include_router(search_router.router)
-
-# Optional include of LLM routers if present on branch
-try:
-    from app.routers import analyse, draft, tasks
-    app.include_router(analyse.router, prefix="/api/v1")
-    app.include_router(tasks.router, prefix="/api/v1")
-    app.include_router(draft.router, prefix="/api/v1")
-except ImportError:
-    pass
+app.include_router(analyse_router.router, prefix="/api/v1")
+app.include_router(tasks_router.router, prefix="/api/v1")
+app.include_router(draft_router.router, prefix="/api/v1")
 
 
 # ---------------------------------------------------------------------------

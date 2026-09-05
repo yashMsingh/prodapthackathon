@@ -1,10 +1,9 @@
-"""
-Application configuration loaded from environment variables.
-"""
+"""Application configuration loaded from environment variables."""
 
 from __future__ import annotations
 
 from functools import lru_cache
+
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -20,7 +19,7 @@ class Settings(BaseSettings):
     )
 
     # ------------------------------------------------------------------
-    # Vectorstore / RAG (BE-2)
+    # Vectorstore / RAG
     # ------------------------------------------------------------------
     chroma_persist_dir: str = Field(
         default="./data/chroma",
@@ -32,20 +31,25 @@ class Settings(BaseSettings):
     )
 
     # ------------------------------------------------------------------
-    # Groq / LLM (BE-1)
+    # Groq / LLM
     # ------------------------------------------------------------------
     groq_api_key: str = Field(
         default="",
-        description="Groq API key",
+        description="Groq API key — set via environment, never committed",
     )
     groq_fast_model: str = Field(
         default="llama-3.1-8b-instant",
+        description="Model used for fast tier-1 priority classification",
     )
     groq_smart_model: str = Field(
         default="llama-3.1-8b-instant",
+        description="Model used for deeper tier-2 analysis",
     )
     llm_temperature: float = Field(
         default=0.2,
+        ge=0.0,
+        le=2.0,
+        description="Sampling temperature for LLM completions",
     )
 
     # ------------------------------------------------------------------

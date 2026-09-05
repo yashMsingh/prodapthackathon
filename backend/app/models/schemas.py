@@ -1,19 +1,18 @@
-"""
-Shared Pydantic schemas for the ProdApt Hackathon backend.
-"""
+"""Shared Pydantic schemas for the ProdApt Hackathon backend."""
 
 from __future__ import annotations
 
 from typing import List, Literal, Optional
+
 from pydantic import BaseModel, Field
 
 
 # ---------------------------------------------------------------------------
-# Core Ingestion / RAG Email Schemas (BE-3 & BE-2 contracts)
+# Core Ingestion / RAG Email Schemas
 # ---------------------------------------------------------------------------
 
 class Email(BaseModel):
-    """Core Email entity schema as produced by ingestion (BE-3) and consumed by RAG (BE-2)."""
+    """Core Email entity schema produced by ingestion and consumed by RAG."""
 
     id: str = Field(..., description="Unique email identifier")
     subject: str = Field(..., description="Email subject line")
@@ -24,14 +23,14 @@ class Email(BaseModel):
 
 
 class SearchResult(BaseModel):
-    """Search result schema consumed by frontend / routers."""
+    """Search result schema consumed by frontend/routers."""
 
     email: Email = Field(..., description="Matched email object")
-    score: float = Field(..., description="Similarity/relevance score between 0.0 and 1.0")
+    score: float = Field(..., description="Similarity/relevance score")
 
 
 # ---------------------------------------------------------------------------
-# LLM Schemas (BE-1 compatibility)
+# LLM Schemas
 # ---------------------------------------------------------------------------
 
 class EmailInput(BaseModel):
@@ -78,19 +77,6 @@ class EmailAnalysisResult(BaseModel):
     draft: Optional[str] = None
 
 
-class AnalyseRequest(BaseModel):
-    email: EmailInput
-    style_examples: List[StyleExample] = Field(default_factory=list)
-
-
-class AnalyseResponse(BaseModel):
-    email_id: Optional[str] = None
-    priority: PriorityResult
-    summary: Optional[str] = None
-    tasks: List[TaskItem] = Field(default_factory=list)
-    draft: Optional[str] = None
-
-
 class TaskExtractionRequest(BaseModel):
     email: EmailInput
 
@@ -108,3 +94,16 @@ class DraftRequest(BaseModel):
 class DraftResponse(BaseModel):
     email_id: Optional[str] = None
     draft: str
+
+
+class AnalyseRequest(BaseModel):
+    email: EmailInput
+    style_examples: List[StyleExample] = Field(default_factory=list)
+
+
+class AnalyseResponse(BaseModel):
+    email_id: Optional[str] = None
+    priority: PriorityResult
+    summary: Optional[str] = None
+    tasks: List[TaskItem] = Field(default_factory=list)
+    draft: Optional[str] = None
