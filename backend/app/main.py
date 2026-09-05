@@ -13,6 +13,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
+from app.routers import analyse as analyse_router
 from app.routers import draft as draft_router
 from app.routers import tasks as tasks_router
 
@@ -46,6 +47,7 @@ app.add_middleware(
 # ---------------------------------------------------------------------------
 # Routers
 # ---------------------------------------------------------------------------
+app.include_router(analyse_router.router, prefix="/api/v1")  # Primary RAG integration point
 app.include_router(tasks_router.router, prefix="/api/v1")
 app.include_router(draft_router.router, prefix="/api/v1")
 

@@ -133,3 +133,57 @@ class DraftResponse(BaseModel):
 
     email_id: Optional[str] = None
     draft: str
+
+
+# ---------------------------------------------------------------------------
+# Unified analysis endpoint (primary RAG integration point)
+# ---------------------------------------------------------------------------
+
+class AnalyseRequest(BaseModel):
+    """Unified request body for the /analyse endpoint.
+
+    This is the PRIMARY integration point for the RAG teammate.
+    They pass their retrieved email + optional style examples here.
+    The LLM layer runs the full two-tier pipeline and returns everything.
+
+    Matches the RAG output contract:
+    {
+        "email": { "id": ..., "sender": ..., "subject": ..., "body": ... },
+        "style_examples": [ { "subject": ..., "body": ... }, ... ]
+    }
+    """
+
+    email: EmailInput = Field(
+        ..., description="The email to analyse (provided by the backend/RAG layer)"
+    )
+    style_examples: List[StyleExample] = Field(
+        default_factory=list,
+        description=(
+            "Sent-email examples for writing style inference. "
+            "Provided by the RAG teammate. Optional. "
+            "Used ONLY to infer style — facts/names/dates are never copied."
+        ),
+    )
+
+
+class AnalyseResponse(BaseModel):
+    """Unified response from the /analyse endpoint.
+
+    Contains the full pipeline result: priority, summary, tasks, and draft.
+    For LOW priority emails, summary/draft are None and tasks is empty.
+    """
+
+    email_id: Optional[str] = Field(default=None)
+    priority: PriorityResult
+    summary: Optional[str] = Field(
+        default=None,
+        description="2-3 sentence summary. None for low-priority emails.",
+    )
+    tasks: List[TaskItem] = Field(
+        default_factory=list,
+        description="Extracted tasks. Empty for low-priority or no-action emails.",
+    )
+    draft: Optional[str] = Field(
+        default=None,
+        description="Suggested reply. None for low-priority emails. Empty string if no reply warranted.",
+    )
