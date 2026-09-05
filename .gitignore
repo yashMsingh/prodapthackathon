@@ -1,43 +1,33 @@
-# Python
+# Dependencies & environments
+node_modules/
+.venv/
+venv/
+ENV/
+env/
+
+# Build artifacts & caches
+.next/
+out/
+build/
+dist/
 __pycache__/
 *.py[cod]
 *$py.class
-*.pyo
-*.pyd
-.Python
-*.so
-
-# Virtual environments
-.venv/
-venv/
-env/
-ENV/
-
-# Environment files — NEVER commit .env
-.env
-.env.local
-.env.*.local
-
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
-
-# Pytest / coverage
 .pytest_cache/
 .coverage
 htmlcov/
+*.egg-info/
+data/chroma/
 
-# IDE
+# Secrets & environment files
+.env
+.env.*
+!.env.example
+
+# IDE / OS
 .idea/
 .vscode/
 *.swp
 *.swo
-
-# Node
-node_modules/
-.next/
-
-# OS
 .DS_Store
 Thumbs.db

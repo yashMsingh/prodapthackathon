@@ -1,9 +1,4 @@
-"""
-Application configuration loaded from environment variables.
-
-Uses pydantic-settings so that values can be overridden via .env files
-or the process environment without any code changes.
-"""
+"""Application configuration loaded from environment variables."""
 
 from __future__ import annotations
 
@@ -14,7 +9,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    """All runtime-configurable settings for the backend."""
+    """Runtime-configurable settings for the backend."""
 
     model_config = SettingsConfigDict(
         env_file=(".env", "backend/.env"),
@@ -24,19 +19,31 @@ class Settings(BaseSettings):
     )
 
     # ------------------------------------------------------------------
-    # Groq
+    # Vectorstore / RAG
+    # ------------------------------------------------------------------
+    chroma_persist_dir: str = Field(
+        default="./data/chroma",
+        description="Directory where ChromaDB stores persistent collections",
+    )
+    embedding_model_name: str = Field(
+        default="all-MiniLM-L6-v2",
+        description="SentenceTransformer embedding model name",
+    )
+
+    # ------------------------------------------------------------------
+    # Groq / LLM
     # ------------------------------------------------------------------
     groq_api_key: str = Field(
         default="",
-        description="Groq API key — MUST be set in environment, never committed",
+        description="Groq API key — set via environment, never committed",
     )
     groq_fast_model: str = Field(
         default="llama-3.1-8b-instant",
-        description="Model used for fast/cheap tier-1 priority classification",
+        description="Model used for fast tier-1 priority classification",
     )
     groq_smart_model: str = Field(
         default="llama-3.1-8b-instant",
-        description="Model used for deeper tier-2 analysis (summary, tasks, draft)",
+        description="Model used for deeper tier-2 analysis",
     )
     llm_temperature: float = Field(
         default=0.2,
@@ -54,6 +61,4 @@ class Settings(BaseSettings):
 
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
-    """Return a cached Settings instance.  Call this everywhere instead of
-    instantiating Settings() directly so that env is parsed only once."""
     return Settings()

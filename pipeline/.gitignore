@@ -1,0 +1,20 @@
+# Secrets
+credentials.json
+token.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env/
+
+# Database
+pipeline_db.sqlite
+*.db
+*.sqlite3
+
+# Test payloads (optional, you can remove this if you want to push it to git)
+# llm_input_payload.json

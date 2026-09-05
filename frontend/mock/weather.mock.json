@@ -1,0 +1,16 @@
+{
+  "city": "Bengaluru",
+  "country": "IN",
+  "temperature": 24,
+  "feelsLike": 26,
+  "condition": "Partly Cloudy",
+  "humidity": 72,
+  "windKph": 14,
+  "icon": "cloud-sun",
+  "updatedAt": "2026-09-05T09:00:00Z",
+  "forecast": [
+    { "day": "Sat", "high": 25, "low": 19, "icon": "cloud-rain" },
+    { "day": "Sun", "high": 22, "low": 18, "icon": "cloud-rain" },
+    { "day": "Mon", "high": 27, "low": 20, "icon": "sun" }
+  ]
+}

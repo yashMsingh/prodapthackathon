@@ -1,0 +1,172 @@
+{
+  "threads": [
+    {
+      "id": "thread-001",
+      "subject": "Q4 Product Roadmap Review — Action Required",
+      "participants": [
+        { "name": "Sarah Chen", "email": "sarah.chen@acme.corp", "avatar": "SC" },
+        { "name": "You", "email": "me@company.com", "avatar": "ME" },
+        { "name": "Raj Patel", "email": "raj.patel@acme.corp", "avatar": "RP" }
+      ],
+      "messages": [
+        {
+          "id": "msg-001-1",
+          "from": { "name": "Sarah Chen", "email": "sarah.chen@acme.corp", "avatar": "SC" },
+          "timestamp": "2026-09-04T14:00:00Z",
+          "body": "Hi team,\n\nFollowing yesterday's all-hands, we need to align on the Q4 priorities before the board presentation on September 12th.\n\nI've attached the draft roadmap. Key items we need decisions on:\n\n1. **Feature X launch** — should we accelerate to Q4 or push to Q1 2027?\n2. **Infrastructure migration** — engineering estimates 3 weeks; can we slot this in?\n3. **Headcount requests** — I need approvals from both of you by EOD Friday.\n\nPlease review and come prepared to the sync on Tuesday at 2 PM.\n\nBest,\nSarah",
+          "isRead": true
+        },
+        {
+          "id": "msg-001-2",
+          "from": { "name": "Raj Patel", "email": "raj.patel@acme.corp", "avatar": "RP" },
+          "timestamp": "2026-09-04T15:30:00Z",
+          "body": "Sarah,\n\nThanks for pulling this together. My thoughts:\n\n- Feature X: I'd vote to keep it Q4. The competitive window is real and we shouldn't wait.\n- Infrastructure: 3 weeks feels aggressive. Let me check with the eng leads and get back to you.\n- Headcount: I'll send approvals by Thursday.\n\nOne thing I'd flag — we should also discuss the pricing model change in this context. It affects the Q4 revenue forecast significantly.\n\nRaj",
+          "isRead": true
+        },
+        {
+          "id": "msg-001-3",
+          "from": { "name": "You", "email": "me@company.com", "avatar": "ME" },
+          "timestamp": "2026-09-04T16:45:00Z",
+          "body": "Both agree on Feature X for Q4. Raj, +1 on including the pricing discussion — it's critical context for the board.\n\nI'll prep a quick slide on pricing scenarios for Tuesday.\n\nCan someone pull together the dependency list for the infra migration so engineering has something concrete to react to?",
+          "isRead": true
+        },
+        {
+          "id": "msg-001-4",
+          "from": { "name": "Sarah Chen", "email": "sarah.chen@acme.corp", "avatar": "SC" },
+          "timestamp": "2026-09-05T08:15:00Z",
+          "body": "Perfect. I'll create the dependency doc and share by EOD today.\n\nAlso — **action item for everyone**: please fill out the roadmap priority survey (link below) before Tuesday. Takes about 5 minutes.\n\nhttps://forms.acme.corp/q4-roadmap-survey\n\nSee you Tuesday!\nSarah",
+          "isRead": false
+        }
+      ],
+      "aiSummary": {
+        "summary": "This thread is a cross-functional discussion about Q4 product roadmap alignment ahead of a September 12th board presentation. The team has agreed to ship Feature X in Q4 rather than delaying. Infrastructure migration timing is under review by engineering. A pricing model discussion has been added to the agenda.",
+        "keyPoints": [
+          "Board presentation deadline: September 12th",
+          "Feature X confirmed for Q4 launch",
+          "Infrastructure migration: 3-week estimate, under review",
+          "Headcount approvals needed from Raj by Thursday",
+          "Priority survey must be completed before Tuesday 2 PM sync"
+        ],
+        "extractedDeadlines": [
+          { "task": "Fill out roadmap priority survey", "deadline": "2026-09-09T14:00:00Z", "priority": "high" },
+          { "task": "Headcount approvals from Raj", "deadline": "2026-09-07T17:00:00Z", "priority": "urgent" },
+          { "task": "Sarah shares dependency doc", "deadline": "2026-09-05T17:00:00Z", "priority": "high" },
+          { "task": "Tuesday roadmap sync", "deadline": "2026-09-09T14:00:00Z", "priority": "urgent" }
+        ],
+        "importance": "urgent",
+        "sentiment": "collaborative"
+      }
+    },
+    {
+      "id": "thread-004",
+      "subject": "Proposal: Frontend Architecture for InboxAI v2",
+      "participants": [
+        { "name": "Marcus Webb", "email": "marcus@devteam.io", "avatar": "MW" },
+        { "name": "You", "email": "me@company.com", "avatar": "ME" },
+        { "name": "Priya Kapoor", "email": "priya@devteam.io", "avatar": "PK" }
+      ],
+      "messages": [
+        {
+          "id": "msg-004-1",
+          "from": { "name": "Marcus Webb", "email": "marcus@devteam.io", "avatar": "MW" },
+          "timestamp": "2026-09-04T10:00:00Z",
+          "body": "Team,\n\nI've been thinking a lot about our component architecture for v2. The current setup has too much prop drilling and the state management is getting hard to reason about.\n\nMy proposal:\n1. Switch to Zustand for global state\n2. Introduce a proper query layer (React Query or SWR)\n3. Co-locate component styles using CSS Modules\n4. Set up Storybook for component docs\n\nI've written this up in detail in the attached doc. Would love your thoughts before we commit to anything.",
+          "isRead": true
+        },
+        {
+          "id": "msg-004-2",
+          "from": { "name": "Priya Kapoor", "email": "priya@devteam.io", "avatar": "PK" },
+          "timestamp": "2026-09-04T13:00:00Z",
+          "body": "Marcus — great writeup. I'm fully on board with Zustand and CSS Modules.\n\nOn React Query vs SWR — I've used both extensively. For our use case (email polling, real-time updates), I'd lean React Query. The cache invalidation story is just better.\n\nStorybook is a yes from me too — we've needed this for a while.",
+          "isRead": true
+        },
+        {
+          "id": "msg-004-3",
+          "from": { "name": "You", "email": "me@company.com", "avatar": "ME" },
+          "timestamp": "2026-09-04T15:00:00Z",
+          "body": "Agreed on all points. Let's go with React Query.\n\nOne thing to add: we should also standardize on a component naming convention. I keep seeing inconsistencies (PascalCase components named with kebab-case files, etc).\n\nCan someone write up a brief style guide? I can review it.",
+          "isRead": true
+        },
+        {
+          "id": "msg-004-4",
+          "from": { "name": "Marcus Webb", "email": "marcus@devteam.io", "avatar": "MW" },
+          "timestamp": "2026-09-04T17:30:00Z",
+          "body": "I'll write the style guide — I have opinions. 😄\n\nLet me draft it this week and share for review by Friday. I'll include naming conventions, folder structure rules, and import ordering.\n\nShould we schedule a short architecture review call next week to walk through the implementation plan together?",
+          "isRead": false
+        }
+      ],
+      "aiSummary": {
+        "summary": "The engineering team is aligning on a new frontend architecture for InboxAI v2. Key decisions reached: Zustand for state management, React Query for data fetching, CSS Modules for styles, and Storybook for component documentation. A naming convention style guide is being authored by Marcus.",
+        "keyPoints": [
+          "Zustand selected for global state management",
+          "React Query chosen over SWR for data fetching",
+          "CSS Modules approved for component styles",
+          "Storybook to be set up for component docs",
+          "Style guide in progress, due Friday"
+        ],
+        "extractedDeadlines": [
+          { "task": "Marcus to write component style guide", "deadline": "2026-09-07T17:00:00Z", "priority": "high" },
+          { "task": "Architecture review call", "deadline": "2026-09-11T12:00:00Z", "priority": "normal" }
+        ],
+        "importance": "high",
+        "sentiment": "positive"
+      }
+    },
+    {
+      "id": "thread-006",
+      "subject": "Contract Renewal — Decision Needed by Sep 10",
+      "participants": [
+        { "name": "Legal Dept", "email": "legal@company.com", "avatar": "LD" },
+        { "name": "You", "email": "me@company.com", "avatar": "ME" },
+        { "name": "CFO Office", "email": "cfo@company.com", "avatar": "CF" }
+      ],
+      "messages": [
+        {
+          "id": "msg-006-1",
+          "from": { "name": "Legal Dept", "email": "legal@company.com", "avatar": "LD" },
+          "timestamp": "2026-09-04T09:00:00Z",
+          "body": "Hi,\n\nThe current SLA contract with CloudHost Pro expires on September 15th. We need a decision on renewal vs migration to a new provider by **September 10th** to avoid a service disruption gap.\n\nOptions:\n1. **Renew** at current rates ($8,400/mo) — 12 month term\n2. **Renegotiate** — Legal thinks we can get 15% off given our usage growth\n3. **Migrate** to AWS — estimated 6-week migration, $5,200/mo equivalent\n\nCFO approval is needed for options 2 and 3. Please advise.",
+          "isRead": true
+        },
+        {
+          "id": "msg-006-2",
+          "from": { "name": "CFO Office", "email": "cfo@company.com", "avatar": "CF" },
+          "timestamp": "2026-09-04T11:00:00Z",
+          "body": "My preference is option 2 — renegotiate. The AWS migration risk during Q4 is too high.\n\nLegal, please proceed with opening renegotiation with CloudHost. Get me a counter-proposal by Sep 8th so I have time to review before the Sep 10th deadline.",
+          "isRead": true
+        },
+        {
+          "id": "msg-006-3",
+          "from": { "name": "You", "email": "me@company.com", "avatar": "ME" },
+          "timestamp": "2026-09-04T11:20:00Z",
+          "body": "Agree. Option 2 is the pragmatic call. Legal — do you need any additional data from our side (usage stats, growth projections) to strengthen the negotiation position?",
+          "isRead": true
+        },
+        {
+          "id": "msg-006-4",
+          "from": { "name": "Legal Dept", "email": "legal@company.com", "avatar": "LD" },
+          "timestamp": "2026-09-05T09:30:00Z",
+          "body": "Yes — usage stats would really help. If you can pull the last 6 months of bandwidth and compute usage from the dashboard and send to me by **Sep 7th**, that gives us leverage in the negotiation.\n\nI'll initiate contact with CloudHost today.",
+          "isRead": false
+        }
+      ],
+      "aiSummary": {
+        "summary": "Legal and CFO are coordinating on a CloudHost Pro contract renewal before the September 15th expiration. Decision reached: pursue renegotiation for a 15% cost reduction rather than AWS migration. Legal needs usage statistics from the team to strengthen negotiations.",
+        "keyPoints": [
+          "Contract expires September 15th — decision needed by Sep 10",
+          "Decision: renegotiate at 15% discount (not migrate to AWS)",
+          "CFO approved renegotiation path",
+          "Usage stats (6 months) needed from you by Sep 7th",
+          "Legal to initiate contact with CloudHost today"
+        ],
+        "extractedDeadlines": [
+          { "task": "Send 6-month usage stats to Legal", "deadline": "2026-09-07T17:00:00Z", "priority": "urgent" },
+          { "task": "CloudHost counter-proposal due", "deadline": "2026-09-08T17:00:00Z", "priority": "high" },
+          { "task": "Final contract decision deadline", "deadline": "2026-09-10T17:00:00Z", "priority": "urgent" }
+        ],
+        "importance": "urgent",
+        "sentiment": "neutral"
+      }
+    }
+  ]
+}
