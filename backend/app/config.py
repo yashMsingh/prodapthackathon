@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     """All runtime-configurable settings for the backend."""
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(".env", "backend/.env"),
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
