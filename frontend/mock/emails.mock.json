@@ -1,0 +1,176 @@
+[
+  {
+    "id": "thread-001",
+    "subject": "Q4 Product Roadmap Review — Action Required",
+    "snippet": "Hi team, following yesterday's all-hands, we need to align on the Q4 priorities. I've attached the draft roadmap...",
+    "participants": [
+      { "name": "Sarah Chen", "email": "sarah.chen@acme.corp", "avatar": "SC" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" },
+      { "name": "Raj Patel", "email": "raj.patel@acme.corp", "avatar": "RP" }
+    ],
+    "timestamp": "2026-09-05T08:15:00Z",
+    "unread": true,
+    "messageCount": 6,
+    "importance": "urgent",
+    "hasTasks": true,
+    "hasDraft": true,
+    "aiSummaryAvailable": true,
+    "labels": ["roadmap", "q4", "action-required"]
+  },
+  {
+    "id": "thread-002",
+    "subject": "Invoice #INV-2094 — Payment Confirmation",
+    "snippet": "Dear Client, we are pleased to confirm receipt of your payment of $12,450 for the October billing cycle...",
+    "participants": [
+      { "name": "Billing Team", "email": "billing@vendor.io", "avatar": "BT" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" }
+    ],
+    "timestamp": "2026-09-05T07:50:00Z",
+    "unread": true,
+    "messageCount": 2,
+    "importance": "normal",
+    "hasTasks": false,
+    "hasDraft": false,
+    "aiSummaryAvailable": true,
+    "labels": ["finance", "invoice"]
+  },
+  {
+    "id": "thread-003",
+    "subject": "Security Alert: New Login from Berlin, Germany",
+    "snippet": "We detected a new sign-in to your account from a device in Berlin, Germany at 03:42 UTC. If this was you...",
+    "participants": [
+      { "name": "Security Team", "email": "security@platform.io", "avatar": "ST" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" }
+    ],
+    "timestamp": "2026-09-05T06:42:00Z",
+    "unread": true,
+    "messageCount": 1,
+    "importance": "urgent",
+    "hasTasks": false,
+    "hasDraft": false,
+    "aiSummaryAvailable": false,
+    "labels": ["security", "alert"]
+  },
+  {
+    "id": "thread-004",
+    "subject": "Proposal: Frontend Architecture for InboxAI v2",
+    "snippet": "Hey, I've been thinking about how we should restructure the component hierarchy for the v2 release. Here's my proposal...",
+    "participants": [
+      { "name": "Marcus Webb", "email": "marcus@devteam.io", "avatar": "MW" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" },
+      { "name": "Priya Kapoor", "email": "priya@devteam.io", "avatar": "PK" }
+    ],
+    "timestamp": "2026-09-04T17:30:00Z",
+    "unread": false,
+    "messageCount": 9,
+    "importance": "high",
+    "hasTasks": true,
+    "hasDraft": true,
+    "aiSummaryAvailable": true,
+    "labels": ["engineering", "architecture", "v2"]
+  },
+  {
+    "id": "thread-005",
+    "subject": "Team Lunch — Thursday at Noon 🍜",
+    "snippet": "Just a quick reminder that team lunch is at The Saffron Kitchen this Thursday. Please RSVP by Wednesday...",
+    "participants": [
+      { "name": "Alex Torres", "email": "alex.torres@company.com", "avatar": "AT" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" }
+    ],
+    "timestamp": "2026-09-04T15:00:00Z",
+    "unread": false,
+    "messageCount": 3,
+    "importance": "normal",
+    "hasTasks": false,
+    "hasDraft": false,
+    "aiSummaryAvailable": false,
+    "labels": ["social", "lunch"]
+  },
+  {
+    "id": "thread-006",
+    "subject": "Contract Renewal — Decision Needed by Sep 10",
+    "snippet": "The current SLA contract with CloudHost Pro expires on September 15. We need a decision on renewal or migration...",
+    "participants": [
+      { "name": "Legal Dept", "email": "legal@company.com", "avatar": "LD" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" },
+      { "name": "CFO Office", "email": "cfo@company.com", "avatar": "CF" }
+    ],
+    "timestamp": "2026-09-04T11:20:00Z",
+    "unread": true,
+    "messageCount": 4,
+    "importance": "urgent",
+    "hasTasks": true,
+    "hasDraft": true,
+    "aiSummaryAvailable": true,
+    "labels": ["legal", "contract", "deadline"]
+  },
+  {
+    "id": "thread-007",
+    "subject": "Monthly Analytics Report — August 2026",
+    "snippet": "Attached is the full analytics report for August 2026. Highlights: MAU +18%, Churn -3.2%, NPS improved to 67...",
+    "participants": [
+      { "name": "Data Team", "email": "data@company.com", "avatar": "DT" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" }
+    ],
+    "timestamp": "2026-09-03T09:00:00Z",
+    "unread": false,
+    "messageCount": 2,
+    "importance": "high",
+    "hasTasks": false,
+    "hasDraft": false,
+    "aiSummaryAvailable": true,
+    "labels": ["analytics", "monthly", "report"]
+  },
+  {
+    "id": "thread-008",
+    "subject": "Re: Onboarding Schedule for New Hire — Zoe Mitchell",
+    "snippet": "Hi, Zoe starts on Monday the 8th. I'll need the laptop provisioned by Friday and the Notion workspace set up...",
+    "participants": [
+      { "name": "HR Team", "email": "hr@company.com", "avatar": "HR" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" },
+      { "name": "IT Support", "email": "it@company.com", "avatar": "IT" }
+    ],
+    "timestamp": "2026-09-03T14:15:00Z",
+    "unread": false,
+    "messageCount": 7,
+    "importance": "high",
+    "hasTasks": true,
+    "hasDraft": false,
+    "aiSummaryAvailable": true,
+    "labels": ["hr", "onboarding"]
+  },
+  {
+    "id": "thread-009",
+    "subject": "AWS Cost Optimization Report — $4,200 potential savings",
+    "snippet": "After running the cost audit, our team identified several under-utilized resources. Key findings: 14 idle EC2 instances...",
+    "participants": [
+      { "name": "DevOps Team", "email": "devops@company.com", "avatar": "DO" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" }
+    ],
+    "timestamp": "2026-09-02T16:45:00Z",
+    "unread": false,
+    "messageCount": 3,
+    "importance": "high",
+    "hasTasks": true,
+    "hasDraft": true,
+    "aiSummaryAvailable": true,
+    "labels": ["devops", "aws", "cost"]
+  },
+  {
+    "id": "thread-010",
+    "subject": "Newsletter: AI Tools Weekly — Issue #84",
+    "snippet": "This week in AI: GPT-5 benchmarks, new Claude updates, open-source LLM roundup, and 5 prompt engineering tips...",
+    "participants": [
+      { "name": "AI Tools Weekly", "email": "newsletter@aitoolsweekly.com", "avatar": "AW" },
+      { "name": "You", "email": "me@company.com", "avatar": "ME" }
+    ],
+    "timestamp": "2026-09-02T08:00:00Z",
+    "unread": false,
+    "messageCount": 1,
+    "importance": "normal",
+    "hasTasks": false,
+    "hasDraft": false,
+    "aiSummaryAvailable": false,
+    "labels": ["newsletter", "ai"]
+  }
+]

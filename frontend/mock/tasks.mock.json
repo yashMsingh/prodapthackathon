@@ -1,0 +1,100 @@
+{
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Fill out Q4 roadmap priority survey",
+      "description": "Complete the 5-minute survey before the Tuesday 2 PM sync",
+      "status": "todo",
+      "priority": "urgent",
+      "deadline": "2026-09-09T14:00:00Z",
+      "sourceThreadId": "thread-001",
+      "sourceThreadSubject": "Q4 Product Roadmap Review — Action Required",
+      "assignee": { "name": "You", "avatar": "ME" },
+      "createdAt": "2026-09-05T08:15:00Z"
+    },
+    {
+      "id": "task-002",
+      "title": "Send 6-month usage stats to Legal",
+      "description": "Pull bandwidth and compute usage from the dashboard for CloudHost renegotiation",
+      "status": "todo",
+      "priority": "urgent",
+      "deadline": "2026-09-07T17:00:00Z",
+      "sourceThreadId": "thread-006",
+      "sourceThreadSubject": "Contract Renewal — Decision Needed by Sep 10",
+      "assignee": { "name": "You", "avatar": "ME" },
+      "createdAt": "2026-09-05T09:30:00Z"
+    },
+    {
+      "id": "task-003",
+      "title": "Review frontend architecture proposal doc",
+      "description": "Review Marcus's proposal for Zustand, React Query, CSS Modules and Storybook adoption",
+      "status": "in_progress",
+      "priority": "high",
+      "deadline": "2026-09-07T17:00:00Z",
+      "sourceThreadId": "thread-004",
+      "sourceThreadSubject": "Proposal: Frontend Architecture for InboxAI v2",
+      "assignee": { "name": "You", "avatar": "ME" },
+      "createdAt": "2026-09-04T17:30:00Z"
+    },
+    {
+      "id": "task-004",
+      "title": "Approve headcount requests",
+      "description": "Review and approve headcount requests from Sarah's Q4 roadmap email",
+      "status": "in_progress",
+      "priority": "urgent",
+      "deadline": "2026-09-07T17:00:00Z",
+      "sourceThreadId": "thread-001",
+      "sourceThreadSubject": "Q4 Product Roadmap Review — Action Required",
+      "assignee": { "name": "Raj Patel", "avatar": "RP" },
+      "createdAt": "2026-09-04T14:00:00Z"
+    },
+    {
+      "id": "task-005",
+      "title": "Prep pricing model slides for Tuesday sync",
+      "description": "Create slide deck covering Q4 pricing scenarios and revenue impact",
+      "status": "in_progress",
+      "priority": "high",
+      "deadline": "2026-09-09T13:00:00Z",
+      "sourceThreadId": "thread-001",
+      "sourceThreadSubject": "Q4 Product Roadmap Review — Action Required",
+      "assignee": { "name": "You", "avatar": "ME" },
+      "createdAt": "2026-09-04T16:45:00Z"
+    },
+    {
+      "id": "task-006",
+      "title": "Provision laptop for Zoe Mitchell",
+      "description": "New hire starts Monday Sep 8 — laptop must be provisioned by Friday",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-09-06T17:00:00Z",
+      "sourceThreadId": "thread-008",
+      "sourceThreadSubject": "Re: Onboarding Schedule for New Hire — Zoe Mitchell",
+      "assignee": { "name": "IT Support", "avatar": "IT" },
+      "createdAt": "2026-09-03T14:15:00Z"
+    },
+    {
+      "id": "task-007",
+      "title": "Right-size 14 idle EC2 instances",
+      "description": "DevOps identified idle EC2 instances — potential $4,200/month savings",
+      "status": "done",
+      "priority": "normal",
+      "deadline": "2026-09-05T17:00:00Z",
+      "sourceThreadId": "thread-009",
+      "sourceThreadSubject": "AWS Cost Optimization Report — $4,200 potential savings",
+      "assignee": { "name": "DevOps Team", "avatar": "DO" },
+      "createdAt": "2026-09-02T16:45:00Z"
+    },
+    {
+      "id": "task-008",
+      "title": "Set up Notion workspace for new hire",
+      "description": "Create Notion onboarding page and share access before Zoe's start date",
+      "status": "done",
+      "priority": "normal",
+      "deadline": "2026-09-07T17:00:00Z",
+      "sourceThreadId": "thread-008",
+      "sourceThreadSubject": "Re: Onboarding Schedule for New Hire — Zoe Mitchell",
+      "assignee": { "name": "You", "avatar": "ME" },
+      "createdAt": "2026-09-03T14:15:00Z"
+    }
+  ]
+}
