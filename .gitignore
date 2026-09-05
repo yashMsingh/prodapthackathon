@@ -1,0 +1,24 @@
+# Dependencies & environments
+node_modules/
+.venv/
+venv/
+ENV/
+env/
+
+# Build artifacts & caches
+.next/
+out/
+build/
+dist/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+*.egg-info/
+data/chroma/
+
+# Secrets & environment files
+.env
+.env.*
+!.env.example
