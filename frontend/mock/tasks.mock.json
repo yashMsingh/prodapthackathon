@@ -1,0 +1,38 @@
+[
+  {
+    "id": "task-101",
+    "title": "Review SOC-2 section 3: Vectorstore Encryption",
+    "description": "Sign-off required on data-at-rest encryption standard for ChromaDB persistence.",
+    "completed": false,
+    "dueDate": "Friday, 5:00 PM EST",
+    "priority": "high",
+    "sourceEmailId": "email-001"
+  },
+  {
+    "id": "task-102",
+    "title": "Review SOC-2 section 5: OAuth Token Refresh",
+    "description": "Ensure Gmail token refresh loop follows token rotation policy.",
+    "completed": false,
+    "dueDate": "Friday, 5:00 PM EST",
+    "priority": "high",
+    "sourceEmailId": "email-001"
+  },
+  {
+    "id": "task-103",
+    "title": "Add retrospective discussion items by 9 AM tomorrow",
+    "description": "Demo slots for InboxAI Shell components.",
+    "completed": false,
+    "dueDate": "Tomorrow, 9:00 AM PST",
+    "priority": "medium",
+    "sourceEmailId": "email-002"
+  },
+  {
+    "id": "task-104",
+    "title": "Confirm drafter payload format with Priya",
+    "description": "Clarify JSON vs multipart payload for contextual weather injects.",
+    "completed": true,
+    "dueDate": "End of week",
+    "priority": "low",
+    "sourceEmailId": "email-004"
+  }
+]
