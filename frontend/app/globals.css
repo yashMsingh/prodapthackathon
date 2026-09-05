@@ -21,12 +21,13 @@
   --priority-high-border: #fca5a5;
 
   --priority-med-bg: #fef3c7;
-  --priority-med-text: #b45309;
+  --priority-med-text: #92400e;
   --priority-med-border: #fcd34d;
 
   --priority-low-bg: #f1f5f9;
-  --priority-low-text: #475569;
+  --priority-low-text: #334155;
   --priority-low-border: #cbd5e1;
+
 
   --success-bg: #dcfce7;
   --success-text: #15803d;
@@ -375,7 +376,18 @@ textarea:focus-visible {
     grid-template-columns: 1fr;
     height: auto;
   }
-  .email-preview-panel {
+  .inbox-layout .email-preview-panel {
+    display: none;
     min-height: 400px;
   }
+  .inbox-layout.mobile-preview-active .email-list-panel {
+    display: none;
+  }
+  .inbox-layout.mobile-preview-active .email-preview-panel {
+    display: flex;
+  }
+  .mobile-back-btn {
+    display: inline-flex !important;
+  }
 }
+

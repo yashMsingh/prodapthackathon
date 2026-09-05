@@ -3,6 +3,7 @@
     "id": "email-001",
     "sender": "Sarah Connor",
     "senderEmail": "s.connor@cyberdyne.tech",
+    "recipient": "yash@prodapt.work",
     "subject": "URGENT: Q3 AI Platform Security Audit & Compliance Sign-off",
     "preview": "We need the finalized security audit checklist reviewed before Friday 5:00 PM EST.",
     "body": "Hi Yash,\n\nOur third-party audit team has uploaded the final penetration test results and SOC-2 compliance checklist for the AI Email Assistant integration.\n\nPlease review sections 3 (Vectorstore Encryption) and 5 (OAuth2 Token Refresh Lifecycle) and provide sign-off before Friday 5:00 PM EST.\n\nBest regards,\nSarah Connor\nVP of Engineering",
@@ -10,12 +11,25 @@
     "priority": "high",
     "unread": true,
     "tags": ["Security", "Compliance", "Action Required"],
+    "threadId": "thread-001",
     "aiSummary": "Final SOC-2 and pen-test checklist uploaded. Requires review of vectorstore encryption and OAuth lifecycle by Friday 5 PM.",
     "importanceReason": "Executive sign-off deadline within 48 hours for external compliance certification.",
     "extractedTasks": [
-      "Review SOC-2 section 3: Vectorstore Encryption",
-      "Review SOC-2 section 5: OAuth Token Refresh",
-      "Submit final sign-off before Friday 5 PM"
+      {
+        "task": "Review SOC-2 section 3: Vectorstore Encryption",
+        "deadline": "Friday, 5:00 PM EST",
+        "assignedTo": "user"
+      },
+      {
+        "task": "Review SOC-2 section 5: OAuth Token Refresh",
+        "deadline": "Friday, 5:00 PM EST",
+        "assignedTo": "user"
+      },
+      {
+        "task": "Submit final sign-off before Friday 5 PM",
+        "deadline": "Friday, 5:00 PM EST",
+        "assignedTo": "user"
+      }
     ],
     "deadline": "Friday, 5:00 PM EST",
     "suggestedReply": "Hi Sarah, I will review sections 3 and 5 today and provide sign-off ahead of the Friday deadline."
@@ -24,6 +38,7 @@
     "id": "email-002",
     "sender": "Alex Rivera",
     "senderEmail": "alex.rivera@datacore.io",
+    "recipient": "team@prodapt.work",
     "subject": "Sprint Retrospective & Next Planning Cycle: Agenda Proposals",
     "preview": "Here is the preliminary agenda for tomorrow's sprint retrospective and demo.",
     "body": "Team,\n\nAttached is the proposed agenda for tomorrow's retrospective at 11:00 AM PST. We will cover:\n1. Front-end component library release\n2. RAG retrieval latency benchmarks\n3. FastAPI endpoint performance\n\nPlease add any extra discussion topics before 9:00 AM tomorrow.\n\nThanks,\nAlex",
@@ -31,11 +46,20 @@
     "priority": "medium",
     "unread": false,
     "tags": ["Sprint", "Internal"],
+    "threadId": "thread-002",
     "aiSummary": "Agenda for tomorrow's 11 AM retrospective covering FE release, RAG latency, and FastAPI perf. Add topics before 9 AM.",
     "importanceReason": "Requires agenda items submission if new topics need scheduling.",
     "extractedTasks": [
-      "Add retrospective discussion items by 9 AM tomorrow",
-      "Attend Sprint Retro at 11 AM PST"
+      {
+        "task": "Add retrospective discussion items by 9 AM tomorrow",
+        "deadline": "Tomorrow, 9:00 AM PST",
+        "assignedTo": "user"
+      },
+      {
+        "task": "Attend Sprint Retro at 11 AM PST",
+        "deadline": "Tomorrow, 11:00 AM PST",
+        "assignedTo": "team"
+      }
     ],
     "deadline": "Tomorrow, 9:00 AM PST",
     "suggestedReply": "Thanks Alex, looks good. I will add a 5-minute slot to demonstrate the new InboxAI Shell."
@@ -44,6 +68,7 @@
     "id": "email-003",
     "sender": "DevOps Alerts",
     "senderEmail": "no-reply@monitor.infra.internal",
+    "recipient": "alerts@prodapt.work",
     "subject": "Weekly Infrastructure Health & Cost Report: US-East-1",
     "preview": "Total cluster spend decreased by 4.2% following the embedding model caching update.",
     "body": "Weekly Report:\n- Cluster spend: -4.2% vs previous period\n- API 99th percentile response latency: 142ms\n- ChromaDB indexing volume: 1.2M chunks\n\nNo manual intervention required. Systems operational.",
@@ -51,6 +76,7 @@
     "priority": "low",
     "unread": false,
     "tags": ["DevOps", "Report"],
+    "threadId": "thread-003",
     "aiSummary": "All systems healthy. Infrastructure spend reduced 4.2% with 142ms P99 latency. No action needed.",
     "importanceReason": "Informational status report with no blocking action items.",
     "extractedTasks": [],
@@ -61,6 +87,7 @@
     "id": "email-004",
     "sender": "Priya Sharma",
     "senderEmail": "priya.s@cloudventures.co",
+    "recipient": "yash@prodapt.work",
     "subject": "Partner Integration: Weather & Calendar Context Hooks",
     "preview": "Checking in regarding the schema for the weather assistant context hooks in the drafter.",
     "body": "Hi Yash,\n\nFollowing up on our architecture discussion: we are finalizing the schema for contextual weather injects into draft generation. Could you confirm if the drafter router will expect JSON or multipart payloads?\n\nLet me know when you have a chance.\n\nWarm regards,\nPriya",
@@ -68,10 +95,15 @@
     "priority": "medium",
     "unread": true,
     "tags": ["Integration", "LLM"],
+    "threadId": "thread-004",
     "aiSummary": "Priya is asking for confirmation on whether the drafter router expects JSON or multipart payloads for weather context.",
     "importanceReason": "Partner team waiting on API contract clarification.",
     "extractedTasks": [
-      "Confirm drafter payload format (JSON vs multipart) with Priya"
+      {
+        "task": "Confirm drafter payload format (JSON vs multipart) with Priya",
+        "deadline": "End of week",
+        "assignedTo": "user"
+      }
     ],
     "deadline": "End of week",
     "suggestedReply": "Hi Priya, the drafter router expects a standard JSON payload with a context object."

@@ -75,9 +75,10 @@ export default function SearchView() {
 
       {searched && (
         <div style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>
-          Found {results.length} result(s) for "{query}"
+          Found {results.length} result(s) for &ldquo;{query}&rdquo;
         </div>
       )}
+
 
       {results.length > 0 ? (
         <div className="inbox-layout" style={{ height: "calc(100vh - 240px)" }}>
